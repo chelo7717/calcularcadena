@@ -9,5 +9,8 @@ describe("generar cadena", () => {
   it("deberia devolver la suma ", () => {
     expect(calculadoraCadenas("2,3")).toEqual(5);
   });
+  it("deberia devolver la suma ", () => {
+    expect(calculadoraCadenas("2,3,4")).toEqual(9);
+  });
   
 });
