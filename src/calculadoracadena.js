@@ -1,6 +1,6 @@
 function calculadoraCadenas(cadena){
     let num =0;
-    let separadores =[","]
+    let separadores =[",","-"]
     var cadenasSeparadas=cadena;
     var cadenaDeNumeros=cadenasSeparadas;
     let sumar=true;
