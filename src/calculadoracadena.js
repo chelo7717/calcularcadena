@@ -1,8 +1,36 @@
+function obtenerSeparadores(cadena){
+    let separadores =[",","-"];
+    let pos=3;
+    let pattern="";
+    let character = cadena[pos];
+    while((character!="[")&&(character!="]")){
+        pattern = pattern+character;
+        pos++;
+        character = cadena[pos];
+        if(cadena[pos+1]=="["){
+            separadores.push(pattern);
+            pattern="";
+            pos=pos+2;
+            character=cadena[pos];
+        }
+    }
+    separadores.push(pattern);
+    return separadores;
+}
+function definirCadenaDeNumeros(cadena,cadenasSeparadas){
+    cadenasSeparadas = cadena.split(" ");
+    let cadenaDeNumeros = cadenasSeparadas[1];
+    return cadenaDeNumeros;
+}
 function calculadoraCadenas(cadena){
     let num =0;
-    let separadores =[",","-"]
+    let separadores =[",","-"," "]
     var cadenasSeparadas=cadena;
     var cadenaDeNumeros=cadenasSeparadas;
+    if(cadena.startsWith("//")){
+        separadores = obtenerSeparadores(cadena);
+        cadenaDeNumeros= definirCadenaDeNumeros(cadena,cadenasSeparadas)
+    }
     let sumar=true;
     let caracter;
     let elemento;
