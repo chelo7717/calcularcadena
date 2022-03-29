@@ -18,5 +18,13 @@ describe("generar cadena", () => {
   it("deberia devolver la suma ", () => {
     expect(calculadoraCadenas("//[;]\\ 4;5;6")).toEqual(15);
   });
+  it("deberia devolver la suma ", () => {
+    expect(calculadoraCadenas("//[;]\\ 4;5;6")).toEqual(15);
+  });
+  it("deberia devolver la suma ", () => {
+    expect(calculadoraCadenas("7,1552")).toEqual(7);
+  });
+
+  
   
 });
